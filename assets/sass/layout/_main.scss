@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+  background-color: #F5F7FA;
+  border-radius: 4px;
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header-content {
+      h1 {
+        margin: 19px 0px 14px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #292D32;
+      }
+
+      hr {
+        border: 1px solid #E3EAF3;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.card-items {
+  margin-top: 25px;
+
+  .card-item:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .card-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 15px 20px 15px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    .card-price {
+      span {
+        font-size: 26px;
+        color: #4FBF65;
+        font-weight: 500;
+      }
+    }
+
+    .card-img {
+      padding: 0px 20px 0px 0px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .card-content {
+      h1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #292D32;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #828F9A;
+      }
+    }
+  }
+}
