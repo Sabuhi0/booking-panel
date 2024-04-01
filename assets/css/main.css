@@ -131,6 +131,10 @@ input {
   justify-content: space-between !important;
 }
 
+.justify-content-flex-end {
+  justify-content: flex-end !important;
+}
+
 .card-items {
   margin-top: 25px;
 }
@@ -144,6 +148,7 @@ input {
   padding: 15px 20px 15px 20px;
   margin-left: 30px;
   margin-right: 30px;
+  cursor: pointer;
 }
 .card-items .card-item .card-price span {
   font-size: 26px;
@@ -169,24 +174,43 @@ input {
 }
 
 .footer-section {
+  position: relative;
+}
+.footer-section #alert-box {
+  transition: opacity 0.55s ease-out;
+  opacity: 0;
+}
+.footer-section .alert-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-58%, -50%);
+  background-color: #EAC956;
+  color: #FFF;
+  padding: 12px;
+  border-radius: 2px;
+}
+.footer-section .show {
+  opacity: 1 !important;
+}
+.footer-section .button-item {
   display: flex;
-  justify-content: flex-end;
   background-color: #FFF;
   border-top: 1px solid #E3EAF3;
   padding: 20px 30px 20px 20px;
 }
-.footer-section .btn {
+.footer-section .button-item .btn {
   display: inline-flex;
   padding: 9px 14px;
   border-radius: 2px;
   border: none;
   cursor: pointer;
 }
-.footer-section .btn-primary {
+.footer-section .button-item .btn-primary {
   background: #6C70DC;
   color: #FFF;
 }
-.footer-section .btn-back {
+.footer-section .button-item .btn-back {
   background: #E3EAF3;
   color: #8F9CA7;
 }
