@@ -7,7 +7,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/main.css">
         <!-- FONTS -->
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     </head>
@@ -22,15 +22,15 @@
                                 <span>1</span>
                                 <p>Staff</p>
                             </a>
-                            <a class="menu-item" href="./service.html">
+                            <a class="menu-item" href="./pages/service.html">
                                 <span>2</span>
                                 <p>Service</p>
                             </a>
-                            <a class="menu-item" href="./datetime.html">
+                            <a class="menu-item" href="./pages/datetime.html">
                                 <span>3</span>
                                 <p>Date & Time</p>
                             </a>
-                            <a class="menu-item" href="./confirm.html">
+                            <a class="menu-item" href="./pages/confirm.html">
                                 <span>4</span>
                                 <p>Confirmation</p>
                             </a>
@@ -49,20 +49,18 @@
                             <!-- End Header -->
                             <!-- Star Staff -->
                             <div class="card-items">
-                                <div class="card-item">
+                                <div id="card-item" class="card-item" data-name="Alex" data-surname="Rosetta" data-email="alexyrosetta@egmail.com">
                                     <div class="card-img">
-                                        <img src="./assets/images/Oval.svg"
-                                            alt="Avatar">
+                                        <img src="./assets/images/Oval.svg" alt="Avatar">
                                     </div>
                                     <div class="card-content">
                                         <h1>Alex Rosetta</h1>
                                         <span>alexyrosetta@egmail.com</span>
                                     </div>
                                 </div>
-                                <div class="card-item">
+                                <div id="card-item" class="card-item" data-name="Maria" data-surname="July" data-email="mariajuly@egmail.com">
                                     <div class="card-img">
-                                        <img src="./assets/images/Oval_woman.svg"
-                                            alt="Avatar">
+                                        <img src="./assets/images/Oval_woman.svg" alt="Avatar">
                                     </div>
                                     <div class="card-content">  
                                         <h1>Maria July</h1>
@@ -74,9 +72,10 @@
                         </section>
 
                         <!-- Start Footer -->
-                        <footer>
-                            <div class="footer-section">
-                                <button type="submit" class="btn btn-primary">Next</button>
+                        <footer class="footer-section">
+                            <div id="alert-box" class="alert-box">Select staff</div>
+                            <div class="button-item justify-content-flex-end">
+                                <button type="submit" id="btn" class="btn btn-primary">Next</button>
                             </div>
                         </footer>
                         <!-- End Footer -->
@@ -86,4 +85,7 @@
             </div>
         </div>
     </body>
+    <!-- JS -->
+    <script src="./assets/js/main.js"></script>
+
 </html>
