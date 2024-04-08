@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (selectedCardId) {
     const selectedCard = document.querySelector(`#card-item[data-id="${selectedCardId}"]`);
     if (selectedCard) {
-      selectedCard.classList.add('selected'); // Önceden tanımlı 'selected' CSS sınıfını ekleyin
+      selectedCard.classList.add('selected');
     }
     else {
       console.log('Selected card not found');
@@ -18,7 +18,7 @@ const warning_text = document.getElementById('alert-box');
 function saveUserInfoAndRedirect(userInfo, itemId) {
   localStorage.setItem('selectedUserInfo', JSON.stringify(userInfo));
   localStorage.setItem('isCardItemSelected', 'true');
-  localStorage.setItem('selectedCardId', itemId); // Seçilen kartın ID'sini kaydet
+  localStorage.setItem('selectedCardId', itemId);
   window.location.href = 'pages/service.html';
 }
 
@@ -30,7 +30,7 @@ cardItems.forEach((item) => {
       surname: item.getAttribute('data-surname'),
       email: item.getAttribute('data-email'),
     };
-    saveUserInfoAndRedirect(selectedUserInfo, item.getAttribute('data-id')); // 'data-id' özelliği kullanılıyor
+    saveUserInfoAndRedirect(selectedUserInfo, item.getAttribute('data-id'));
   });
 });
 
