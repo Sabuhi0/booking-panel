@@ -3,6 +3,14 @@
   background-color: #F5F7FA;
   border-radius: 4px;
 
+  .selected {
+    border: 2px solid #4FBF65;
+  }
+
+  .cursor {
+    cursor: no-drop;
+  }
+
   main {
     width: 100%;
     display: flex;

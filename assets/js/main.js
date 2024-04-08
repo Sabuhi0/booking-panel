@@ -1,31 +1,44 @@
-// console.log("Hello World");
-const cardItems = document.querySelectorAll('#card-item');
-let isCardItemSelected = false;
-let selectedUserInfo = null;
-
-cardItems.forEach((item) => {
-  item.addEventListener('click', function () {
-    isCardItemSelected = true;
-    selectedUserInfo = {
-      name: this.getAttribute('data-name'),
-      surname: this.getAttribute('data-surname'),
-      email: this.getAttribute('data-email'),
+document.addEventListener('DOMContentLoaded', () => {
+  const selectedCardId = localStorage.getItem('selectedCardId');
+  if (selectedCardId) {
+    const selectedCard = document.querySelector(`#card-item[data-id="${selectedCardId}"]`);
+    if (selectedCard) {
+      selectedCard.classList.add('selected'); // Önceden tanımlı 'selected' CSS sınıfını ekleyin
     }
-    console.log(selectedUserInfo);
-  })
-})
+    else {
+      console.log('Selected card not found');
+    }
+  }
+});
 
-
+const cardItems = document.querySelectorAll('#card-item');
 const btn = document.getElementById("btn");
 const warning_text = document.getElementById('alert-box');
 
-btn.addEventListener('click', function () {
-  if (!isCardItemSelected) {
-    warning_text.classList.add("show");
-    setTimeout(function () {
-      warning_text.classList.remove("show");
-    }, 1800)
+function saveUserInfoAndRedirect(userInfo, itemId) {
+  localStorage.setItem('selectedUserInfo', JSON.stringify(userInfo));
+  localStorage.setItem('isCardItemSelected', 'true');
+  localStorage.setItem('selectedCardId', itemId); // Seçilen kartın ID'sini kaydet
+  window.location.href = 'pages/service.html';
+}
+
+cardItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const selectedUserInfo = {
+      id: item.getAttribute('data-id'),
+      name: item.getAttribute('data-name'),
+      surname: item.getAttribute('data-surname'),
+      email: item.getAttribute('data-email'),
+    };
+    saveUserInfoAndRedirect(selectedUserInfo, item.getAttribute('data-id')); // 'data-id' özelliği kullanılıyor
+  });
+});
+
+btn.addEventListener('click', () => {
+  if (localStorage.getItem('isCardItemSelected') === 'true') {
+    window.location.href = 'pages/service.html';
   } else {
-    console.log("Seçilen kullanici bilgileri:", selectedUserInfo);
+    warning_text.classList.add("show");
+    setTimeout(() => warning_text.classList.remove("show"), 1800);
   }
-})
+});

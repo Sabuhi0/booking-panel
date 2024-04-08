@@ -220,6 +220,12 @@ input {
   background-color: #F5F7FA;
   border-radius: 4px;
 }
+.section .selected {
+  border: 2px solid #4FBF65;
+}
+.section .cursor {
+  cursor: no-drop;
+}
 .section main {
   width: 100%;
   display: flex;

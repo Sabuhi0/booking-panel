@@ -7,7 +7,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../assets/css/main.css">
         <!-- FONTS -->
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     </head>
@@ -18,7 +18,7 @@
                     <!-- Start Sidebar -->
                     <aside class="sidebar">
                         <nav class="menu-items">
-                            <a class="menu-item" href="./index.html">
+                            <a class="menu-item" href="../index.html">
                                 <span>1</span>
                                 <p>Staff</p>
                             </a>
@@ -48,7 +48,17 @@
                             </header>
                             <!-- End Header -->
                         </section>
-
+                        <div id="userInfo"></div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', (event) => {
+                                const userInfo = JSON.parse(localStorage.getItem('selectedUserInfo'));
+                                
+                                if (userInfo) {
+                                    const userInfoDiv = document.getElementById('userInfo');
+                                    userInfoDiv.innerHTML = `<h1>Staff: ${userInfo.name}, ${userInfo.surname}</h1>`;
+                                }
+                            });
+                        </script>
                         <!-- Start Footer -->
                         <footer>
                             <div class="footer-section justify-content-between">
