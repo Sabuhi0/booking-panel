@@ -1,0 +1,45 @@
+#calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 210px;
+  /* 30px * 7 columns */
+  margin: 20px auto;
+
+  div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.calendar-sections {
+  display: flex;
+  justify-content: space-around;
+
+  .date-section {
+    .calendar-navigation {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 24px;
+
+      span {
+        font-size: 14px;
+      }
+
+      .prev,
+      .next {
+        border: none;
+        background-color: #F5F7FA;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .calendar {
+    // background-color: red;
+  }
+}
