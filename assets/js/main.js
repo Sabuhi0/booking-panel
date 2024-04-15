@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const selectedCardId = localStorage.getItem('selectedCardId');
+  const selectedCardId = localStorage.getItem('selectedStaffId');
   if (selectedCardId) {
     const selectedCard = document.querySelector(`#card-item[data-id="${selectedCardId}"]`);
     if (selectedCard) {
@@ -11,31 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const cardItems = document.querySelectorAll('#card-item');
+const staffItems = document.querySelectorAll('#card-item');
 const btn = document.getElementById("btn");
 const warning_text = document.getElementById('alert-box');
 
-function saveUserInfoAndRedirect(userInfo, itemId) {
-  localStorage.setItem('selectedUserInfo', JSON.stringify(userInfo));
-  localStorage.setItem('isCardItemSelected', 'true');
-  localStorage.setItem('selectedCardId', itemId);
+function saveUserInfoAndRedirect(staffInfo, selectedStaffId) {
+  localStorage.setItem('staffInfo', JSON.stringify(staffInfo));
+  localStorage.setItem('isStaffSelected', 'true');
+  localStorage.setItem('selectedStaffId', selectedStaffId);
   window.location.href = 'pages/service.html';
 }
 
-cardItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    const selectedUserInfo = {
-      id: item.getAttribute('data-id'),
-      name: item.getAttribute('data-name'),
-      surname: item.getAttribute('data-surname'),
-      email: item.getAttribute('data-email'),
+staffItems.forEach((staffItem) => {
+  staffItem.addEventListener('click', () => {
+    const selectedStaffInfo = {
+      id: staffItem.getAttribute('data-id'),
+      name: staffItem.getAttribute('data-name'),
+      surname: staffItem.getAttribute('data-surname'),
     };
-    saveUserInfoAndRedirect(selectedUserInfo, item.getAttribute('data-id'));
+    saveUserInfoAndRedirect(selectedStaffInfo, staffItem.getAttribute('data-id'));
   });
 });
 
 btn.addEventListener('click', () => {
-  if (localStorage.getItem('isCardItemSelected') === 'true') {
+  if (localStorage.getItem('isStaffSelected') === 'true') {
     window.location.href = 'pages/service.html';
   } else {
     warning_text.classList.add("show");
