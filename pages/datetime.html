@@ -50,32 +50,45 @@
                             <!-- Start Calendar -->
                             <div class="calendar-sections">
                                 <!-- Star Date -->
-                                <div class="date-section" id="Date">
-                                    <div class="calendar-navigation">
-                                        <button class="prev" id="prevMonth">&lt;</button>
-                                        <span id="monthYear"></span>
-                                        <button class="next" id="nextMonth">&gt;</button>
+                                <div class="date-section" id="date">
+                                    <div id="calendar-controls">
+                                        <button id="prev-month"><</button>
+                                        <span id="month-year"></span>
+                                        <button id="next-month">></button>
                                     </div>
-                                    <div class="calendar">
-                                        <div id="calendar">
-                                            <div class="calendar-box"></div>
-                                        </div>
-                                    </div>
+                                     <div id="weekdays">
+                                        <div class="weekday">Mon</div>
+                                        <div class="weekday">Tue</div>
+                                        <div class="weekday">Wed</div>
+                                        <div class="weekday">Thu</div>
+                                        <div class="weekday">Fri</div>
+                                        <div class="weekday">Sat</div>
+                                        <div class="weekday">Sun</div>
+                                     </div>
+                                    <div id="days-container"></div>
                                 </div>
                                 <!-- End Date -->
                                 <!-- Star Time -->
-                                <div class="time-section" id="Time">
-                                    Time
+                                <div class="time-section">
+                                    <h1>Time</h1>
+                                    <div class="time-item">
+                                        <h1 id="selected-date">Select date</h1>
+                                        <div id="time-slots">
+                                            
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- End Time -->
-                            </div>
+                            </div>  
                             <!-- End Calendar -->
                         </section>
                         <!-- Start Footer -->
                         <footer class="footer-section">
-                            <div id="alert-box" class="alert-box">Select staff</div>
+                            <div id="alert-box" class="hidden alert-box">Select Date & Time</div>
                             <div class="button-item  justify-content-between">
-                                <button type="submit" class="btn btn-back">Back</button>
+                                 <a href="../pages/service.html">
+                                    <button type="submit" class="btn btn-back">Back</button>
+                                </a>
                                 <button type="submit" id="btn" class="btn btn-primary">Next</button>
                             </div>
                         </footer>
