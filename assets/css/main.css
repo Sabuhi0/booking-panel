@@ -416,4 +416,45 @@ input {
 
 button {
   margin: 5px;
+}
+
+main section .confirm-detailes .user-form {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+main section .confirm-detailes .user-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+main section .confirm-detailes .user-form form .form-group:nth-child(3),
+main section .confirm-detailes .user-form form .form-group:nth-child(4) {
+  margin-top: 1.5rem;
+}
+main section .confirm-detailes .user-form form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+main section .confirm-detailes .user-form form .form-group label {
+  margin-bottom: 10px;
+}
+main section .confirm-detailes .user-form form .form-group label span {
+  color: red;
+}
+main section .confirm-detailes .user-form form .form-group input {
+  border: 1px solid #ccc;
+  padding: 14px;
+}
+main section .confirm-detailes .user-form form .form-group input:focus {
+  outline: none;
+}
+main section .user-info {
+  background-color: #fff;
+  margin-top: 34px;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-top: 30px;
+  padding-left: 24px;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=main.css.map */

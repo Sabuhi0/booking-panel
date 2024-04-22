@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <!-- CSS -->
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="bg-shape">
-            <div class="container">
-                <div class="section">
-                    <!-- Start Sidebar -->
-                    <aside class="sidebar">
-                        <nav class="menu-items">
-                            <a class="menu-item" href="../index.html">
-                                <span>1</span>
-                                <p>Staff</p>
-                            </a>
-                            <a class="menu-item" href="./service.html">
-                                <span>2</span>
-                                <p>Service</p>
-                            </a>
-                            <a class="menu-item" href="./datetime.html">
-                                <span>3</span>
-                                <p>Date & Time</p>
-                            </a>
-                            <a class="menu-item" href="./confirm.html">
-                                <span>4</span>
-                                <p>Confirmation</p>
-                            </a>
-                        </nav>
-                    </aside>
-                    <!-- End Sidebar -->
 
-                    <!-- Start Main -->
-                    <main>
-                        <section>
-                            <!-- Start Header -->
-                            <header class="header-content">
-                                <h1>Confirm detailes</h1>
-                                <hr>
-                            </header>
-                            <!-- End Header -->
-                        </section>
-                        <div id="userInfo"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-shape">
+        <div class="container">
+            <div class="section">
+                <!-- Start Sidebar -->
+                <aside class="sidebar">
+                    <nav class="menu-items">
+                        <a class="menu-item" href="../index.html">
+                            <span>1</span>
+                            <p>Staff</p>
+                        </a>
+                        <a class="menu-item" href="./service.html">
+                            <span>2</span>
+                            <p>Service</p>
+                        </a>
+                        <a class="menu-item" href="./datetime.html">
+                            <span>3</span>
+                            <p>Date & Time</p>
+                        </a>
+                        <a class="menu-item" href="./confirm.html">
+                            <span>4</span>
+                            <p>Confirmation</p>
+                        </a>
+                    </nav>
+                </aside>
+                <!-- End Sidebar -->
+
+                <!-- Start Main -->
+                <main>
+                    <section>
+                        <!-- Start Header -->
+                        <header class="header-content">
+                            <h1>Confirm detailes</h1>
+                            <hr>
+                        </header>
+                        <!-- End Header -->
+                        <!-- Confirm detailes Start -->
+                        <div class="confirm-detailes">
+                            <div class="user-form">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <label for="">First name <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Last name <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">E-mail <span>*</span></label>
+                                        <input type="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Phone</label>
+                                        <input type="number">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="userInfo" class="user-info"></div>
                         <script>
                             document.addEventListener('DOMContentLoaded', (event) => {
-                                const userInfo = JSON.parse(localStorage.getItem('selectedUserInfo'));
-                                
-                                if (userInfo) {
+                                const staffInfo = JSON.parse(localStorage.getItem('staffInfo'));
+                                const serviceInfo = JSON.parse(localStorage.getItem('serviceInfo'));
+                                const date = JSON.parse(localStorage.getItem('selectedDate'));
+                                const time = JSON.parse(localStorage.getItem('selectedTime'));
+
+
+                                if (staffInfo && serviceInfo && date && time) {
                                     const userInfoDiv = document.getElementById('userInfo');
-                                    userInfoDiv.innerHTML = `<h1>Staff: ${userInfo.name}, ${userInfo.surname}</h1>`;
+                                    userInfoDiv.innerHTML = `
+                                            <h1>Staff: ${staffInfo.name} ${staffInfo.surname}</h1>
+                                            <h1>Service: ${serviceInfo.service_name}</h1>
+                                            <h1>Date: ${date.year}-${date.month}-${date.day} / ${time.time}-${time.endTime}</h1>
+                                            <h1>Total: ${serviceInfo.servicePrice}</h1>
+                                            `;
                                 }
                             });
                         </script>
-                        <!-- Start Footer -->
-                        <footer>
-                            <div class="footer-section justify-content-between">
-                               <button type="submit" class="btn btn-back">Back</button>
-                                <button type="submit" class="btn btn-primary">Confirm Booking</button>
-                            </div>
-                        </footer>
-                        <!-- End Footer -->
-                    </main>
-                    <!-- End Main -->
-                </div>
+                    </section>
+                    <!-- Start Footer -->
+                    <footer class="footer-section">
+                        <!-- <div id="alert-box" class="hidden alert-box">Select Date & Time</div> -->
+                        <div class="button-item justify-content-between">
+                            <a href="../pages/service.html">
+                                <button type="submit" class="btn btn-back">Back</button>
+                            </a>
+                            <button type="submit" id="btn" class="btn btn-primary">Confirm Booking</button>
+                        </div>
+                    </footer>
+                    <!-- End Footer -->
+                </main>
+                <!-- End Main -->
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
