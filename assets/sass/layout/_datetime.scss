@@ -123,6 +123,16 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   padding: 10px;
+
+  .selected-day {
+    background-color: #6C70DC;
+    color: #fff !important;
+  }
+}
+
+.selected-time {
+  background-color: #20b320ba !important;
+  color: #fff;
 }
 
 #days-container button {
@@ -188,15 +198,4 @@
 
 button {
   margin: 5px;
-}
-
-.time-slot-button {
-  display: block;
-  padding: 10px;
-  margin: 5px 0;
-  background-color: #f0f0f0;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
 }
