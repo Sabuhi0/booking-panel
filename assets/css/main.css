@@ -135,6 +135,10 @@ input {
   justify-content: flex-end !important;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .card-items {
   margin-top: 25px;
 }
@@ -173,9 +177,6 @@ input {
   color: #828F9A;
 }
 
-.footer-section {
-  position: relative;
-}
 .footer-section #alert-box {
   transition: opacity 0.55s ease-out;
   opacity: 0;
@@ -244,7 +245,7 @@ input {
 
 .sidebar {
   min-width: 230px;
-  height: 620px;
+  height: 660px;
   background-color: #292D32;
   border-bottom-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -449,6 +450,51 @@ main section .confirm-detailes .user-form form .form-group input {
 main section .confirm-detailes .user-form form .form-group input:focus {
   outline: none;
 }
+main section .modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  opacity: 1;
+}
+main section .modal-content {
+  position: relative;
+  transform: translate(0%, 130%);
+  background-color: #fefefe;
+  margin: 0% auto;
+  border: 1px solid #888;
+  width: 40%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+}
+main section .modal-content .modal-body {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+main section .close {
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  color: #aaa;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+main section .close:hover,
+main section .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
 main section .user-info {
   background-color: #fff;
   margin-top: 34px;
@@ -457,4 +503,21 @@ main section .user-info {
   padding-top: 30px;
   padding-left: 24px;
   padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+main section .user-info h1 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6C70DC;
+}
+main section .user-info h1:not(:first-child) {
+  padding-top: 20px;
+}
+main section .user-info span {
+  color: #000;
+  padding-left: 10px;
+}
+main section .user-info p {
+  color: #4FBF65;
+  padding-left: 10px;
 }/*# sourceMappingURL=main.css.map */

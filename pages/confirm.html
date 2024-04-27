@@ -51,56 +51,43 @@
                         <!-- End Header -->
                         <!-- Confirm detailes Start -->
                         <div class="confirm-detailes">
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" id="closeModal">&times;</span>
+                                    <div class="modal-body"></div>
+                                </div>
+                            </div>
                             <div class="user-form">
                                 <form action="#">
                                     <div class="form-group">
                                         <label for="">First name <span>*</span></label>
-                                        <input type="text">
+                                        <input id="name" type="text">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="">Last name <span>*</span></label>
-                                        <input type="text">
+                                        <input id="surname" type="text">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="">E-mail <span>*</span></label>
-                                        <input type="email">
+                                        <input id="email" type="email">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="">Phone</label>
-                                        <input type="number">
+                                        <input id="phone" type="number">
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div id="userInfo" class="user-info"></div>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', (event) => {
-                                const staffInfo = JSON.parse(localStorage.getItem('staffInfo'));
-                                const serviceInfo = JSON.parse(localStorage.getItem('serviceInfo'));
-                                const date = JSON.parse(localStorage.getItem('selectedDate'));
-                                const time = JSON.parse(localStorage.getItem('selectedTime'));
-
-
-                                if (staffInfo && serviceInfo && date && time) {
-                                    const userInfoDiv = document.getElementById('userInfo');
-                                    userInfoDiv.innerHTML = `
-                                            <h1>Staff: ${staffInfo.name} ${staffInfo.surname}</h1>
-                                            <h1>Service: ${serviceInfo.service_name}</h1>
-                                            <h1>Date: ${date.year}-${date.month}-${date.day} / ${time.time}-${time.endTime}</h1>
-                                            <h1>Total: ${serviceInfo.servicePrice}</h1>
-                                            `;
-                                }
-                            });
-                        </script>
                     </section>
                     <!-- Start Footer -->
                     <footer class="footer-section">
                         <!-- <div id="alert-box" class="hidden alert-box">Select Date & Time</div> -->
                         <div class="button-item justify-content-between">
-                            <a href="../pages/service.html">
+                            <a href="../pages/datetime.html">
                                 <button type="submit" class="btn btn-back">Back</button>
                             </a>
                             <button type="submit" id="btn" class="btn btn-primary">Confirm Booking</button>
@@ -112,6 +99,8 @@
             </div>
         </div>
     </div>
+    <!-- JS -->
+    <script src="../assets/js/confirm.js"></script>
 </body>
 
 </html>
