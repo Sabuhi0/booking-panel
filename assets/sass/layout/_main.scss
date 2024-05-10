@@ -8,7 +8,11 @@
   }
 
   .cursor {
-    cursor: no-drop;
+    cursor: not-allowed;
+  }
+
+  .pointer-events {
+    pointer-events: none;
   }
 
   main {

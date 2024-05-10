@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const menu_bars = document.querySelectorAll('#menu-bar');
+  const selected_time = localStorage.getItem('selectedTime');
+  const pageUrl = window.location.pathname;
+  const pageName = pageUrl.split('/').pop();
+
+  if (!selected_time) {
+    const pages = document.querySelectorAll('.page-disabled');
+    pages.forEach((page) => {
+      page.classList.add('pointer-events');
+    });
+    menu_bars.forEach((menu) => {
+      menu.classList.add('cursor');
+    })
+  }
+
+  console.log(pageName);
+  const menu_nums = document.querySelectorAll('#menu_num');
+  const menu_texts = document.querySelectorAll('#menu_text');
+  const datetime_menu_num = document.getElementById('datatime_menu_num');
+  const datetime_menu_text = document.getElementById('datatime_menu_text');
+  if (pageName === 'datetime.html') {
+    menu_nums.forEach((menu_num) => {
+      menu_num.classList.add('active-purple')
+      menu_num.innerHTML = '<i class="fa-solid fa-check"></i>';
+    })
+    menu_texts.forEach((menu_text) => {
+      menu_text.classList.add('active-white')
+    })
+    datetime_menu_num.classList.add('active-num')
+    datetime_menu_text.classList.add('active-text')
+  }
+})
+
+
 let currentMonth = 4;
 let currentYear = 2024;
 const specialDays = [25, 26, 27];

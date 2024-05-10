@@ -225,7 +225,10 @@ input {
   border: 2px solid #4FBF65;
 }
 .section .cursor {
-  cursor: no-drop;
+  cursor: not-allowed;
+}
+.section .pointer-events {
+  pointer-events: none;
 }
 .section main {
   width: 100%;
@@ -254,20 +257,33 @@ input {
 .sidebar .menu-items {
   margin: 30px 0px 0px 30px;
 }
-.sidebar .menu-items .menu-item:not(:first-child) {
+.sidebar .menu-items .menu-bar:not(:first-child) {
   margin-top: 25px;
 }
-.sidebar .menu-items .menu-item {
+.sidebar .menu-items .menu-bar .menu-item {
   width: fit-content;
   display: flex;
   align-items: center;
 }
-.sidebar .menu-items .menu-item p {
+.sidebar .menu-items .menu-bar .menu-item .active-text {
+  color: #4FBF65;
+}
+.sidebar .menu-items .menu-bar .menu-item .active-num {
+  background-color: #4FBF65;
+  color: #FFF;
+}
+.sidebar .menu-items .menu-bar .menu-item .active-white {
+  color: #FFF;
+}
+.sidebar .menu-items .menu-bar .menu-item .active-purple {
+  background-color: #6C70DC;
+}
+.sidebar .menu-items .menu-bar .menu-item p {
   font-size: 14px;
   font-weight: 400;
   color: #626C76;
 }
-.sidebar .menu-items .menu-item span {
+.sidebar .menu-items .menu-bar .menu-item span {
   width: 24px;
   height: 24px;
   font-size: 12px;

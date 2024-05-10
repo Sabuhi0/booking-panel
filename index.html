@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     </head>
     <body>
         <div class="bg-shape">
@@ -18,22 +20,30 @@
                     <!-- Start Sidebar -->
                     <aside class="sidebar">
                         <nav class="menu-items">
-                            <a class="menu-item" href="./index.html">
-                                <span>1</span>
-                                <p>Staff</p>
-                            </a>
-                            <a class="menu-item" href="./pages/service.html">
-                                <span>2</span>
-                                <p>Service</p>
-                            </a>
-                            <a class="menu-item" href="./pages/datetime.html">
-                                <span>3</span>
-                                <p>Date & Time</p>
-                            </a>
-                            <a class="menu-item" href="./pages/confirm.html">
-                                <span>4</span>
-                                <p>Confirmation</p>
-                            </a>
+                            <div class="menu-bar">
+                                <a class="menu-item" href="./index.html">
+                                    <span id="menu_num">1</span>
+                                    <p id="menu_text" >Staff</p>
+                                </a>
+                            </div>
+                            <div id="menu-bar" class="menu-bar">
+                                <a class="menu-item router-disabled" href="./pages/service.html">
+                                    <span>2</span>
+                                    <p>Service</p>
+                                </a>
+                            </div>
+                            <div id="menu-bar" class="menu-bar">
+                                <a class="menu-item router-disabled page-disabled" href="./pages/datetime.html">
+                                    <span>3</span>
+                                    <p>Date & Time</p>
+                                </a>
+                            </div>
+                            <div id="menu-bar" class="menu-bar">
+                                <a class="menu-item router-disabled page-disabled" href="./pages/confirm.html">
+                                    <span>4</span>
+                                    <p>Confirmation</p>
+                                </a>
+                            </div>
                         </nav>
                     </aside>
                     <!-- End Sidebar -->

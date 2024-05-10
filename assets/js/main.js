@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const selectedCardId = localStorage.getItem('selectedStaffId');
+  const selectedDate = localStorage.getItem('selectedDate');
+  const bookingPanel = localStorage.getItem('BookingPanel');
+  const menu_bars = document.querySelectorAll('#menu-bar');
+
+  // App data
+  if (bookingPanel) {
+    appData = JSON.parse(bookingPanel);
+    console.log(appData);
+  }
+
   if (selectedCardId) {
     const selectedCard = document.querySelector(`#card-item[data-id="${selectedCardId}"]`);
     if (selectedCard) {
@@ -8,6 +18,38 @@ document.addEventListener('DOMContentLoaded', () => {
     else {
       console.log('Selected card not found');
     }
+  }
+  if (!selectedCardId) {
+    const menu_items = document.querySelectorAll('.router-disabled');
+    menu_items.forEach((menu_item) => {
+      menu_item.classList.add('pointer-events');
+    });
+    menu_bars.forEach((menu) => {
+      menu.classList.add('cursor');
+    })
+  }
+  if (!selectedDate) {
+    const pages = document.querySelectorAll('.page-disabled');
+    pages.forEach((page) => {
+      page.classList.add('pointer-events');
+    });
+    menu_bars.forEach((menu) => {
+      menu.classList.add('cursor');
+    })
+  }
+
+  // Page Router
+  const pageUrl = window.location.pathname;
+  const pageName = pageUrl.split('/').pop();
+  const menu_num = document.getElementById('menu_num');
+  const menu_text = document.getElementById('menu_text');
+
+  if (pageName === 'index.html') {
+    menu_num.classList.add('active-num')
+    menu_text.classList.add('active-text')
+  } else {
+    menu_num.classList.remove('active-num')
+    menu_text.classList.remove('active-text')
   }
 });
 

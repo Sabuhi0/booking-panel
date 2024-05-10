@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Page Route
+  const pageUrl = window.location.pathname;
+  const pageName = pageUrl.split('/').pop();
+  console.log(pageName);
+  const menu_nums = document.querySelectorAll('#menu_num');
+  const menu_texts = document.querySelectorAll('#menu_text');
+  const confirm_menu_num = document.getElementById('confirm_menu_num');
+  const confirm_menu_text = document.getElementById('confirm_menu_text');
+  if (pageName === 'confirm.html') {
+    menu_nums.forEach((menu_num) => {
+      menu_num.classList.add('active-purple')
+      menu_num.innerHTML = '<i class="fa-solid fa-check"></i>';
+    })
+    menu_texts.forEach((menu_text) => {
+      menu_text.classList.add('active-white')
+    })
+    confirm_menu_num.classList.add('active-num')
+    confirm_menu_text.classList.add('active-text')
+  }
+
   const staffInfo = JSON.parse(localStorage.getItem('staffInfo'));
   const serviceInfo = JSON.parse(localStorage.getItem('serviceInfo'));
   const date = JSON.parse(localStorage.getItem('selectedDate'));
@@ -25,6 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const surname = document.getElementById('surname').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
+    const formData = { name, surname, email };
+
+    const dataToSave = {
+      DATA: {
+        name: formData.name,
+        surname: formData.surname,
+        email: formData.email,
+        date: `${date.day}-${date.month}-${date.year}`,
+        service_id: serviceInfo.id,
+        staff_id: staffInfo.id,
+        time: time.time
+      }
+    };
+
+    localStorage.setItem('BookingPanel', JSON.stringify(dataToSave));
 
     if (!name || !email || !phone || !surname) {
       showModal('Please, fill all required fields!');
@@ -59,12 +95,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-const checkFormFields = () => {
-  const name = document.getElementById('inputName').value.trim();
-  const surname = document.getElementById('inputSurname').value.trim();
-  const email = document.getElementById('inputEmail').value.trim();
-  const phone = document.getElementById('inputPhone').value.trim();
-
-  return name && surname && email && phone;
-}

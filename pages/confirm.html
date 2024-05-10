@@ -20,22 +20,31 @@
                 <!-- Start Sidebar -->
                 <aside class="sidebar">
                     <nav class="menu-items">
-                        <a class="menu-item" href="../index.html">
-                            <span>1</span>
-                            <p>Staff</p>
-                        </a>
-                        <a class="menu-item" href="./service.html">
-                            <span>2</span>
-                            <p>Service</p>
-                        </a>
-                        <a class="menu-item" href="./datetime.html">
-                            <span>3</span>
-                            <p>Date & Time</p>
-                        </a>
-                        <a class="menu-item" href="./confirm.html">
-                            <span>4</span>
-                            <p>Confirmation</p>
-                        </a>
+                        <div class="menu-bar">
+                            <a class="menu-item" href="../index.html">
+                                <span id="menu_num">1</span>
+                                <p id="menu_text">Staff</p>
+                            </a>
+                        </div>
+                        
+                        <div id="menu-bar" class="menu-bar">
+                            <a class="menu-item" href="./pages/service.html">
+                                <span id="menu_num">2</span>
+                                <p id="menu_text">Service</p>
+                            </a>
+                        </div>
+                        <div class="menu-bar">
+                            <a class="menu-item" href="./datetime.html">
+                                <span id="menu_num">3</span>
+                                <p id="menu_text">Date & Time</p>
+                            </a>
+                        </div>
+                        <div class="menu-bar">
+                            <a class="menu-item" href="../pages/confirm.html">
+                                <span id="confirm_menu_num">4</span>
+                                <p id="confirm_menu_text">Confirmation</p>
+                            </a>
+                        </div>
                     </nav>
                 </aside>
                 <!-- End Sidebar -->
@@ -100,6 +109,7 @@
     </div>
     <!-- JS -->
     <script src="../assets/js/confirm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 </body>
 
 </html>
