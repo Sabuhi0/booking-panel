@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pages.forEach((page) => {
       page.classList.add('pointer-events');
     });
-    menu_bars.forEach((menu) => {
+    menu_bars.forEach((menu) => { 
       menu.classList.add('cursor');
     })
   }

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h1 class="d-flex">Total: <p> ${serviceInfo.servicePrice}</p></h1>
     `;
   } else {
-    window.location.href.split(' ') ? window.location.href = "http://127.0.0.1:5500/index.html" : "";
+    // window.location.href.split(' ') ? window.location.href = "http://127.0.0.1:5500/index.html" : "";
   }
   const submitBtn = document.getElementById('btn');
   const modal = document.getElementById('modal');
