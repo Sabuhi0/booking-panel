@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-let currentMonth = 4;
+let currentMonth = 5;
 let currentYear = 2024;
 const specialDays = [25, 26, 27];
 
