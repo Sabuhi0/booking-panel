@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pages.forEach((page) => {
       page.classList.add('pointer-events');
     });
-    menu_bars.forEach((menu) => { 
+    menu_bars.forEach((menu) => {
       menu.classList.add('cursor');
     })
   }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu_num = document.getElementById('menu_num');
   const menu_text = document.getElementById('menu_text');
 
-  if (pageName === 'index.html') {
+  if (pageName !== '') {
     menu_num.classList.add('active-num')
     menu_text.classList.add('active-text')
   } else {
