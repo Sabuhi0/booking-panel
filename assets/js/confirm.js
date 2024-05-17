@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(pageName);
   const menu_nums = document.querySelectorAll('#menu_num');
   const menu_texts = document.querySelectorAll('#menu_text');
-  const confirm_menu_num = document.getElementById('confirm_menu_num');
-  const confirm_menu_text = document.getElementById('confirm_menu_text');
+  const confirm_menu_nums = document.querySelectorAll('#confirm_menu_num');
+  const confirm_menu_texts = document.querySelectorAll('#confirm_menu_text');
   if (pageName === 'confirm.html') {
     menu_nums.forEach((menu_num) => {
       menu_num.classList.add('active-purple')
@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     menu_texts.forEach((menu_text) => {
       menu_text.classList.add('active-white')
     })
-    confirm_menu_num.classList.add('active-num')
-    confirm_menu_text.classList.add('active-text')
+    confirm_menu_nums.forEach((confirm_menu_num) => {
+      confirm_menu_num.classList.add('active-num')
+    });
+    confirm_menu_texts.forEach((confirm_menu_text) => {
+      confirm_menu_text.classList.add('active-text')
+    });
   }
 
   const staffInfo = JSON.parse(localStorage.getItem('staffInfo'));

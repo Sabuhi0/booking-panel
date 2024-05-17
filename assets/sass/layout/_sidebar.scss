@@ -5,59 +5,117 @@
   border-bottom-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+}
 
-  .menu-items {
-    margin: 30px 0px 0px 30px;
+.menu-items {
+  margin: 30px 0px 0px 30px;
 
-    .menu-bar:not(:first-child) {
-      margin-top: 25px;
-    }
+  .menu-bar:not(:first-child) {
+    margin-top: 25px;
+  }
 
-    .menu-bar {
-      .menu-item {
-        width: fit-content;
+  .menu-bar {
+    .menu-item {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+
+      .active-text {
+        color: #4FBF65;
+      }
+
+      .active-num {
+        background-color: #4FBF65;
+        color: #FFF;
+      }
+
+      .active-white {
+        color: #FFF;
+      }
+
+      .active-purple {
+        background-color: #6C70DC;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #626C76;
+      }
+
+      span {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #FFF;
+        background-color: #4D545A;
         display: flex;
+        justify-content: center;
         align-items: center;
-
-        .active-text {
-          color: #4FBF65;
-        }
-
-        .active-num {
-          background-color: #4FBF65;
-          color: #FFF;
-        }
-
-        .active-white {
-          color: #FFF;
-        }
-
-        .active-purple {
-          background-color: #6C70DC;
-        }
-
-        p {
-          font-size: 14px;
-          font-weight: 400;
-          color: #626C76;
-        }
-
-        span {
-          width: 24px;
-          height: 24px;
-          font-size: 12px;
-          font-weight: 600;
-          color: #FFF;
-          background-color: #4D545A;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          margin-right: 12px;
-        }
+        border-radius: 50%;
+        margin-right: 12px;
       }
     }
+  }
 
 
+}
+
+// Resbonsive styles
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+
+  .resbonsive-menu {
+    display: none;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .resbonsive-menu {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    padding-top: 60px;
+    z-index: -9999;
+    opacity: 0;
+    transition: all ease-in 0.4s;
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 9999;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .resbonsive-menu.active {
+    opacity: 1;
+    z-index: 9999;
+    transition: all ease-in 0.4s;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {}

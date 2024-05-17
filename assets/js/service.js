@@ -36,16 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageUrl = window.location.pathname;
   const pageName = pageUrl.split('/').pop();
   console.log(pageName);
-  const menu_num = document.getElementById('menu_num');
-  const menu_text = document.getElementById('menu_text');
-  const service_menu_num = document.getElementById('service_menu_num');
-  const service_menu_text = document.getElementById('service_menu_text');
+  const menu_nums = document.querySelectorAll('#menu_num');
+  const menu_texts = document.querySelectorAll('#menu_text');
+  const service_menu_nums = document.querySelectorAll('#service_menu_num');
+  const service_menu_texts = document.querySelectorAll('#service_menu_text');
   if (pageName === 'service.html') {
-    menu_num.classList.add('active-purple')
-    menu_num.innerHTML = '<i class="fa-solid fa-check"></i>';
-    menu_text.classList.add('active-white');
-    service_menu_num.classList.add('active-num')
-    service_menu_text.classList.add('active-text');
+    menu_nums.forEach((menu_num) => {
+      menu_num.classList.add('active-purple')
+      menu_num.innerHTML = '<i class="fa-solid fa-check"></i>';
+    })
+    menu_texts.forEach((menu_text) => {
+      menu_text.classList.add('active-white');
+    })
+    service_menu_nums.forEach((service_menu_num) => {
+      service_menu_num.classList.add('active-num')
+    })
+    service_menu_texts.forEach((service_menu_text) => {
+      service_menu_text.classList.add('active-text')
+    })
   }
 
 })

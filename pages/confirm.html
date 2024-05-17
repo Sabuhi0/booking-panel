@@ -50,13 +50,50 @@
                 <!-- End Sidebar -->
 
                 <!-- Start Main -->
-                <main>
+                <main class="h-100">
+                    <!-- Start Section -->
                     <section>
                         <!-- Start Header -->
-                        <header class="header-content">
-                            <h1>Confirm detailes</h1>
+                            <header class="header-content">
+                                <h1>Select staff</h1>
+                                <!-- Resbonsive menu bar -->
+                                <div id="hamburger" class="hamburger">
+                                 <img src="../assets/images/BurgerMenu.svg" alt="hamburger">
+                                </div>
+                                <div id="resbonsive-menu" class="resbonsive-menu">
+                                    <nav class="menu-items">
+                                        <div class="menu-bar">
+                                            <a class="menu-item" href="../index.html">
+                                                <span id="menu_num">1</span>
+                                                <p id="menu_text">Staff</p>
+                                            </a>
+                                        </div>
+                                        
+                                        <div id="menu-bar" class="menu-bar">
+                                            <a class="menu-item" href="./pages/service.html">
+                                                <span id="menu_num">2</span>
+                                                <p id="menu_text">Service</p>
+                                            </a>
+                                        </div>
+                                        <div class="menu-bar">
+                                            <a class="menu-item" href="./datetime.html">
+                                                <span id="menu_num">3</span>
+                                                <p id="menu_text">Date & Time</p>
+                                            </a>
+                                        </div>
+                                        <div class="menu-bar">
+                                            <a class="menu-item" href="../pages/confirm.html">
+                                                <span id="confirm_menu_num">4</span>
+                                                <p id="confirm_menu_text">Confirmation</p>
+                                            </a>
+                                        </div>
+                                    </nav>
+                                    <div id="resbonsive-close" class="close-btn">
+                                        <img src="../assets/images/Close.svg" alt="close">
+                                    </div>
+                                </div>
+                            </header>
                             <hr>
-                        </header>
                         <!-- End Header -->
                         <!-- Confirm detailes Start -->
                         <div class="confirm-detailes">
@@ -91,7 +128,9 @@
                             </div>
                         </div>
                         <div id="userInfo" class="user-info"></div>
+                        <!-- Confirm detailes End -->
                     </section>
+                    <!-- End Section -->
                     <!-- Start Footer -->
                     <footer class="footer-section">
                         <div class="button-item justify-content-between">
@@ -108,6 +147,7 @@
         </div>
     </div>
     <!-- JS -->
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/confirm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 </body>

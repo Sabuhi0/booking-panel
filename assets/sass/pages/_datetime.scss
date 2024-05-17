@@ -1,69 +1,7 @@
-// .calendar-sections {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   align-items: center;
-
-//   .date-section {
-//     width: 420px;
-
-//     .calendar-navigation {
-//       text-align: center;
-//       margin: 20px 0;
-//       font-size: 24px;
-
-//       span {
-//         font-size: 18px;
-//         cursor: default;
-//       }
-
-//       .prev,
-//       .next {
-//         border: none;
-//         background-color: #F5F7FA;
-//         font-weight: bold;
-//         font-size: 20px;
-//         cursor: pointer;
-//       }
-//     }
-
-//     .date-organizer {
-//       .calendar-box {
-//         #calendar {
-//           display: flex;
-//           gap: 14px;
-//           flex-wrap: wrap;
-//           width: 100%;
-//           margin: 20px 20px;
-
-//           .calendar-date {
-//             width: 50px;
-//             height: 50px;
-//             display: flex;
-//             background-color: #b3b3b35c;
-//             align-items: center;
-//             justify-content: center;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-// }
-
 .calendar-sections {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
   align-items: baseline;
-
-  .date-section {
-    width: 420px;
-    margin-left: 18px;
-  }
-
-  .time-section {
-    margin-right: 18px;
-  }
 }
 
 #weekdays {
@@ -115,14 +53,12 @@
     border: none;
     background: none;
     font-size: 22px;
+    cursor: pointer;
   }
 }
 
-
 #days-container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding: 10px;
 
   .selected-day {
     background-color: #6C70DC;
@@ -169,10 +105,11 @@
 
 
 #time-slots {
-  display: flex !important;
-  justify-content: space-around;
-  align-items: center;
+  display: grid !important;
+  gap: 14px;
   margin-top: 14px;
+  margin-left: 12px;
+  margin-right: 12px;
   text-align: center;
 }
 
@@ -198,4 +135,81 @@
 
 button {
   margin: 5px;
+}
+
+// Resbonsive styles
+
+@media screen and (min-width: 770px) {
+  #days-container {
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+  }
+
+
+  #time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calendar-sections {
+    grid-template-columns: repeat(2, 1fr);
+
+    .date-section {
+      width: 420px;
+      margin-left: 18px;
+    }
+
+    .time-section {
+      margin-right: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #days-container {
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+  }
+
+  #time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calendar-sections {
+    grid-template-columns: repeat(1, 1fr);
+
+    .date-section {
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+
+    .time-section {
+      margin-left: 18px;
+      margin-right: 18px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #days-container {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 5px;
+  }
+
+  #time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar-sections {
+    .date-section {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    .time-section {
+      margin-right: 8px;
+      margin-left: 8px;
+      margin-bottom: 7px;
+    }
+  }
 }

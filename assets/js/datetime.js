@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(pageName);
   const menu_nums = document.querySelectorAll('#menu_num');
   const menu_texts = document.querySelectorAll('#menu_text');
-  const datetime_menu_num = document.getElementById('datatime_menu_num');
-  const datetime_menu_text = document.getElementById('datatime_menu_text');
+  const datetime_menu_nums = document.querySelectorAll('#datatime_menu_num');
+  const datetime_menu_texts = document.querySelectorAll('#datatime_menu_text');
   if (pageName === 'datetime.html') {
     menu_nums.forEach((menu_num) => {
       menu_num.classList.add('active-purple')
@@ -27,8 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     menu_texts.forEach((menu_text) => {
       menu_text.classList.add('active-white')
     })
-    datetime_menu_num.classList.add('active-num')
-    datetime_menu_text.classList.add('active-text')
+    datetime_menu_nums.forEach((datetime_menu_num) => {
+      datetime_menu_num.classList.add('active-num')
+    })
+    datetime_menu_texts.forEach((datetime_menu_text) => {
+      datetime_menu_text.classList.add('active-text')
+    })
   }
 })
 

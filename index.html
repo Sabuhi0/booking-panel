@@ -48,13 +48,48 @@
                     <!-- End Sidebar -->
 
                     <!-- Start Main -->
-                    <main>
+                    <main class="h-100">
                         <section>
                             <!-- Start Header -->
                             <header class="header-content">
                                 <h1>Select staff</h1>
-                                <hr>
+                                <!-- Resbonsive menu bar -->
+                                <div id="hamburger" class="hamburger">
+                                 <img src="./assets/images/BurgerMenu.svg" alt="hamburger">
+                                </div>
+                                <div id="resbonsive-menu" class="resbonsive-menu">
+                                    <nav class="menu-items">
+                                        <div class="menu-bar">
+                                            <a class="menu-item" href="./index.html">
+                                                <span id="menu_num">1</span>
+                                                <p id="menu_text" >Staff</p>
+                                            </a>
+                                        </div>
+                                        <div id="menu-bar" class="menu-bar ">
+                                            <a class="menu-item router-disabled" href="./pages/service.html">
+                                                <span>2</span>
+                                                <p>Service</p>
+                                            </a>
+                                        </div>
+                                        <div id="menu-bar" class="menu-bar ">
+                                            <a class="menu-item router-disabled page-disabled" href="./pages/datetime.html">
+                                                <span>3</span>
+                                                <p>Date & Time</p>
+                                            </a>
+                                        </div>
+                                        <div id="menu-bar" class="menu-bar ">
+                                            <a class="menu-item router-disabled page-disabled" href="./pages/confirm.html">
+                                                <span>4</span>
+                                                <p>Confirmation</p>
+                                            </a>
+                                        </div>
+                                    </nav>
+                                    <div id="resbonsive-close" class="close-btn">
+                                        <img src="./assets/images/Close.svg" alt="close">
+                                    </div>
+                                </div>
                             </header>
+                            <hr>
                             <!-- End Header -->
                             <!-- Star Staff -->
                             <div class="card-items">
@@ -95,6 +130,7 @@
         </div>
     </body>
     <!-- JS -->
+    <script src="./assets/js/staff.js"></script>
     <script src="./assets/js/main.js"></script>
 
 </html>
