@@ -663,7 +663,6 @@ main section .modal-content {
   background-color: #fefefe;
   margin: 0% auto;
   border: 1px solid #888;
-  width: 40%;
   height: 25%;
   display: flex;
   align-items: center;
@@ -672,8 +671,8 @@ main section .modal-content {
   border-radius: 8px;
 }
 main section .modal-content .modal-body {
-  font-size: 1.6rem;
   font-weight: 500;
+  text-align: center;
 }
 main section .close {
   position: absolute;
@@ -719,6 +718,12 @@ main section .user-info p {
   .confirm-detailes form .form-group:nth-child(4) {
     margin-top: 1.5rem;
   }
+  .modal-content {
+    width: 40%;
+  }
+  .modal-content .modal-body {
+    font-size: 1.6rem;
+  }
   .user-info {
     margin-top: 34px;
     margin-left: 24px;
@@ -737,6 +742,12 @@ main section .user-info p {
   .confirm-detailes form .form-group:nth-child(3),
   .confirm-detailes form .form-group:nth-child(4) {
     margin-top: 1.5rem;
+  }
+  .modal-content {
+    width: 60%;
+  }
+  .modal-content .modal-body {
+    font-size: 1.5rem;
   }
   .user-info {
     margin-top: 34px;
@@ -757,6 +768,12 @@ main section .user-info p {
   .confirm-detailes form .form-group:nth-child(4) {
     margin-top: 1.5rem;
   }
+  .modal-content {
+    width: 80%;
+  }
+  .modal-content .modal-body {
+    font-size: 1.4rem;
+  }
   .user-info {
     margin-top: 34px;
     margin-left: 24px;
@@ -775,6 +792,12 @@ main section .user-info p {
   .confirm-detailes form .form-group:nth-child(3),
   .confirm-detailes form .form-group:nth-child(4) {
     margin-top: 0rem;
+  }
+  .modal-content {
+    width: 95%;
+  }
+  .modal-content .modal-body {
+    font-size: 1.3rem;
   }
   .user-info {
     margin-top: 14px;

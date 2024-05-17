@@ -53,7 +53,6 @@ main {
       background-color: #fefefe;
       margin: 0% auto;
       border: 1px solid #888;
-      width: 40%;
       height: 25%;
       display: flex;
       align-items: center;
@@ -62,8 +61,8 @@ main {
       border-radius: 8px;
 
       .modal-body {
-        font-size: 1.6rem;
         font-weight: 500;
+        text-align: center;
       }
     }
 
@@ -125,6 +124,14 @@ main {
     }
   }
 
+  .modal-content {
+    width: 40%;
+
+    .modal-body {
+      font-size: 1.6rem;
+    }
+  }
+
   .user-info {
     margin-top: 34px;
     margin-left: 24px;
@@ -148,7 +155,14 @@ main {
         margin-top: 1.5rem;
       }
     }
+  }
 
+  .modal-content {
+    width: 60%;
+
+    .modal-body {
+      font-size: 1.5rem;
+    }
   }
 
   .user-info {
@@ -176,6 +190,15 @@ main {
 
   }
 
+  .modal-content {
+    width: 80%;
+
+    .modal-body {
+      font-size: 1.4rem;
+    }
+
+  }
+
   .user-info {
     margin-top: 34px;
     margin-left: 24px;
@@ -198,7 +221,14 @@ main {
         margin-top: 0rem;
       }
     }
+  }
 
+  .modal-content {
+    width: 95%;
+
+    .modal-body {
+      font-size: 1.3rem;
+    }
   }
 
   .user-info {
