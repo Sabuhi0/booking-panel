@@ -169,6 +169,7 @@ input {
   }
   .bg-shape {
     height: auto;
+    position: relative;
   }
   .container {
     max-width: 600px;
@@ -176,6 +177,7 @@ input {
 }
 @media screen and (max-width: 480px) {
   .bg-shape {
+    position: relative;
     height: 100%;
     padding-left: 14px;
     padding-right: 14px;
