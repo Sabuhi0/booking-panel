@@ -104,6 +104,22 @@
     opacity: 0;
     transition: all ease-in 0.4s;
 
+    .menu-items {
+      .menu-bar {
+        .menu-item {
+          span {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
     .close-btn {
       position: absolute;
       top: 20px;

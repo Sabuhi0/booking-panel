@@ -424,6 +424,14 @@ input {
     opacity: 0;
     transition: all ease-in 0.4s;
   }
+  .resbonsive-menu .menu-items .menu-bar .menu-item span {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .resbonsive-menu .menu-items .menu-bar .menu-item p {
+    font-size: 20px;
+  }
   .resbonsive-menu .close-btn {
     position: absolute;
     top: 20px;
